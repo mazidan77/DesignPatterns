@@ -1,8 +1,11 @@
 ﻿//using Design_Patterns.Observer;
+using Design_Patterns.Memento;
 using Design_Patterns.Observer.Interfaces;
 using Design_Patterns.Strategy;
 using Design_Patterns.Strategy.Models;
 using Design_Patterns.Template;
+using Design_Patterns.Visitor;
+using Design_Patterns.Visitor.NewFeatures;
 using System.Data;
 
 namespace Design_Patterns
@@ -49,6 +52,32 @@ namespace Design_Patterns
             //concrete2.TemplateMethod();
             #endregion
 
+            #region Memento
+            //TextEditor textEditor = new TextEditor();
+            //History history = new History();
+
+            //textEditor.Content = "Hello";
+
+            //history.SaveHistoryState(textEditor.Save()); 
+            
+            //textEditor.Content = "world";
+
+            //history.SaveHistoryState(textEditor.Save());
+            
+            //textEditor.Content = "no";
+
+
+            //textEditor.Restore(history.Undo());
+            //textEditor.Restore(history.Undo());
+
+        
+            //Console.WriteLine(textEditor.Content);
+
+            #endregion
+
+
+            DayShiftScheduleManagement dayShift = new DayShiftScheduleManagement();
+            dayShift.accept(new CalculateBonusVisitor());
 
         }
     }
