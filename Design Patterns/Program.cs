@@ -1,4 +1,5 @@
 ﻿//using Design_Patterns.Observer;
+using Design_Patterns.Iterator;
 using Design_Patterns.Memento;
 using Design_Patterns.Observer.Interfaces;
 using Design_Patterns.Strategy;
@@ -59,26 +60,42 @@ namespace Design_Patterns
             //textEditor.Content = "Hello";
 
             //history.SaveHistoryState(textEditor.Save()); 
-            
+
             //textEditor.Content = "world";
 
             //history.SaveHistoryState(textEditor.Save());
-            
+
             //textEditor.Content = "no";
 
 
             //textEditor.Restore(history.Undo());
             //textEditor.Restore(history.Undo());
 
-        
+
             //Console.WriteLine(textEditor.Content);
 
             #endregion
 
+            #region Visitor
+            //DayShiftScheduleManagement dayShift = new DayShiftScheduleManagement();
+            //dayShift.accept(new CalculateBonusVisitor());
+            #endregion
 
-            DayShiftScheduleManagement dayShift = new DayShiftScheduleManagement();
-            dayShift.accept(new CalculateBonusVisitor());
 
+            #region Iterator
+            //      EmployeeCollections e1 = new EmployeeCollections();
+
+
+
+            //  var iterator=    e1.GetEmplyeeDirectReportIterator();
+            ////  var iterator=    e1.GetEmployeeCoWorkerIterator();
+            //      while(iterator.HasNext())
+            //      {
+            //          Console.WriteLine(iterator.GetNext().Name);
+            //      }
+
+            #endregion
         }
     }
+
 }
